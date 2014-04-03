@@ -1,9 +1,0 @@
-cache/*
-log/*
-config/*
-!schema.yml
-test/*
-data/sql/*
-.DS_Store
-web/.htaccess
-.tags
