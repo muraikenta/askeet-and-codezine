@@ -1,0 +1,7 @@
+loginSuccess:
+  metas:
+    title:  login|admin|My BBS
+
+all:
+  metas:
+    title:  admin|My BBS

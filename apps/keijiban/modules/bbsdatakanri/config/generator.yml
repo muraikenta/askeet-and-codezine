@@ -1,0 +1,7 @@
+generator:
+  class:              sfPropelAdminGenerator
+  param:
+    model_class:      Bbsdata
+    theme:            default
+    list:
+      filters:        [author, id, parent_id]

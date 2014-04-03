@@ -1,0 +1,62 @@
+# st, get双方の入力に対応する
+methods: [post, get]
+# 各フィールドの入力値条件を以下に記述する
+fields:
+  # フィールド名
+  title:       
+    # 必須項目であることを示す
+    required:  
+      # 入力されていない場合表示するメッセージ
+      msg:   タイトルを入力してください。 
+    # 使用するバリデーター。sfStringValidatorは文字列用
+    sfStringValidator:  
+      # 許容最小文字数。指定しなければ1文字
+      min:        
+      # 最小文字数より少ない場合表示するメッセージ
+      min_error:  
+      # 許容最大文字数。指定しなければバリデーター上無制限
+      max:  50    
+      # 最大文字数を超えた場合表示するメッセージ
+      max_error:  タイトル文字数が多すぎます（50文字以内）。
+
+  author:
+    required:
+      msg:   お名前を入力してください。
+    sfStringValidator:
+      min:
+      min_error:
+      max:        30
+      max_error:  お名前の文字数が多すぎます（30文字以内）。
+  mail:
+
+    # emailアドレス用バリデーター
+    sfEmailValidator: 
+
+      # 適正なemailアドレスが表示されない場合表示するメッセージ
+      email_error:  "適切なメールアドレスを入力してください（例: name@domain.com）。" 
+  url:
+
+    # 正規表現用バリデーター
+    sfRegexValidator: 
+
+      # パターンマッチした場合には入力値は適正であるという指定
+      match:  Yes 
+
+      # 適性でない場合表示するメッセージ
+      match_error:  "適切なホームページアドレスを入力してください（例: http://example.com）。" 
+
+      #マッチさせる正規表現
+      pattern:      /^https?:\/\/\w+/i
+
+  body:
+    required:
+      msg:   本文を入力してください。
+
+  passwd:
+    required:
+      msg:   削除用パスワードを入力してください。
+    sfStringValidator:
+      min:        5
+      min_error:  削除用パスワードの文字数が少なすぎます。5文字～15文字で入力してください。
+      max:        15
+      max_error:  削除用パスワードの文字数が多すぎます。5文字～15文字で入力してください。

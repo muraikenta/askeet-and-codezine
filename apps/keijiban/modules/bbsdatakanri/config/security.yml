@@ -1,0 +1,9 @@
+login:
+  is_secure: off
+
+logout:
+  is_secure: off
+
+all:
+  is_secure: on
+  credentials: admin

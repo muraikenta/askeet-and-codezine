@@ -1,0 +1,4 @@
+# default values
+all:
+  pager:
+    homepage_max: 2

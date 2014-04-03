@@ -1,0 +1,147 @@
+---
+propel:
+
+ bbsdata:
+  _attributes:
+   idMethod: native
+  id:
+   type: INTEGER
+   required: true
+   autoIncrement: true
+   primaryKey: true
+  title:
+   type: VARCHAR
+   size: 50
+  author:
+   type: VARCHAR
+   size: 30
+  mail:
+   type: LONGVARCHAR
+  url:
+   type: LONGVARCHAR
+  body:
+   type: LONGVARCHAR
+  passwd:
+   type: VARCHAR
+   size: 15
+  parent_id:
+   type: INTEGER
+  created_at:
+   type: TIMESTAMP
+
+ question:
+  _attributes:
+  id: 
+   type: integer
+   required: true
+   primaryKey: true
+   autoIncrement: true
+  user_id: 
+   type: integer
+   foreignTable: user
+   foreignReference: id
+  title: 
+   type: longvarchar
+  stripped_title:
+   type: varchar
+   size: 255
+   index: unique
+  body: 
+   type: longvarchar
+  html_body:
+   type: longvarchar
+  interested_users:
+   type: integer
+   default: 0
+  created_at: 
+   type: timestamp
+  updated_at: 
+   type: timestamp
+
+ answer: 
+  _attributes: 
+  id: 
+   type: integer
+   required: true
+   primaryKey: true
+   autoIncrement: true
+  question_id: 
+   type: integer
+   foreignTable: question
+   foreignReference: id
+  user_id: 
+   type: integer
+   foreignTable: user
+   foreignReference: id
+  body: 
+   type: longvarchar
+  html_body:
+   type: longvarchar
+  relevancy_up:
+   type: integer
+   default: 0
+  relevancy_down:
+   type: integer
+   default: 0
+  created_at: 
+   type: timestamp
+
+ user: 
+  _attributes: 
+  id: 
+   type: integer
+   required: true
+   primaryKey: true
+   autoIncrement: true
+  nickname: 
+   type: varchar
+   size: 50
+  first_name: 
+   type: varchar
+   size: 100
+  last_name: 
+   type: varchar
+   size: 100
+  email:
+   type: varchar
+   size: 100
+  sha1_password:
+   type: varchar
+   size: 40
+  salt:
+   type: varchar
+   size: 32
+  created_at: 
+   type: timestamp
+
+ interest: 
+  _attributes: 
+  question_id: 
+   type: integer
+   primaryKey: true
+   foreignTable: question
+   foreignReference: id
+  user_id: 
+   type: integer
+   primaryKey: true
+   foreignTable: user
+   foreignReference: id
+  created_at: 
+   type: timestamp
+
+ relevancy: 
+  _attributes: 
+  answer_id: 
+   type: integer
+   primarykey: true
+   foreignTable: answer
+   foreignReference: id
+  user_id: 
+   type: integer
+   primaryKey: true
+   foreignTable: user
+   foreignReference: id
+  score: 
+   type: integer
+  created_at: 
+   type: timestamp

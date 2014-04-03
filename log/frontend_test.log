@@ -1,0 +1,30 @@
+Jan 09 15:33:48 symfony [info] {sfRouting} connect "/question/:stripped_title"
+Jan 09 15:33:48 symfony [info] {sfRouting} connect "/index/:page"
+Jan 09 15:33:48 symfony [info] {sfRouting} connect "/question/recent/:page"
+Jan 09 15:33:48 symfony [info] {sfRouting} connect "/add_question"
+Jan 09 15:33:48 symfony [info] {sfRouting} connect "/recent/answers/:page"
+Jan 09 15:33:48 symfony [info] {sfRouting} connect "/add_answer"
+Jan 09 15:33:48 symfony [info] {sfRouting} connect "/login"
+Jan 09 15:33:48 symfony [info] {sfRouting} connect "/logout"
+Jan 09 15:33:48 symfony [info] {sfRouting} connect "/user/:nickname"
+Jan 09 15:33:48 symfony [info] {sfRouting} connect "/"
+Jan 09 15:33:48 symfony [info] {sfRouting} connect "/symfony/:action/*"
+Jan 09 15:33:48 symfony [info] {sfRouting} connect "/:module"
+Jan 09 15:33:48 symfony [info] {sfRouting} connect "/:module/:action/*"
+Jan 09 15:33:48 symfony [info] {sfContext} initialization
+Jan 09 15:33:48 symfony [info] {sfController} initialization
+Jan 09 15:33:48 symfony [info] {sfRouting} match route [default] "/:module/:action/*"
+Jan 09 15:33:48 symfony [info] {sfRequest} request parameters array (  'module' => 'answer',  'action' => 'index',)
+Jan 09 15:33:48 symfony [info] {sfController} dispatch request
+Jan 09 15:33:48 symfony [info] {sfController} action "answer/index" does not exist
+Jan 09 15:33:48 symfony [info] {sfFilter} executing filter "sfFakeRenderingFilter"
+Jan 09 15:33:48 symfony [info] {sfFilter} executing filter "sfCommonFilter"
+Jan 09 15:33:48 symfony [info] {sfFilter} executing filter "sfFlashFilter"
+Jan 09 15:33:48 symfony [info] {sfFilter} executing filter "sfExecutionFilter"
+Jan 09 15:33:48 symfony [info] {sfAction} call "defaultActions->executeError404()"
+Jan 09 15:33:48 symfony [info] {sfView} initialize view for "default/error404"
+Jan 09 15:33:48 symfony [info] {sfViewConfig} set component "sidebar" (sidebar/default)
+Jan 09 15:33:48 symfony [info] {sfView} render "/usr/share/php/data/symfony/modules/default/templates/error404Success.php"
+Jan 09 15:33:48 symfony [info] {sfView} decorate content with "/usr/share/php/data/symfony/modules/default/templates/defaultLayout.php"
+Jan 09 15:33:48 symfony [info] {sfView} render "/usr/share/php/data/symfony/modules/default/templates/defaultLayout.php"
+Jan 09 15:33:48 symfony [info] {sfResponse} send content (2488 o)

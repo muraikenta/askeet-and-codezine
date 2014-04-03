@@ -1,0 +1,6 @@
+all:
+  propel:
+    class:          sfPropelDatabase
+    param:
+      dsn:          mysql://devuser:Ganba4649@localhost/mysite_murai
+      encode:         utf8
